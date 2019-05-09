@@ -14,6 +14,7 @@ func main() {
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 	goRoutineTest()
+
 }
 
 func goRoutineTest() {
