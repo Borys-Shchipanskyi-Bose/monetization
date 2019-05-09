@@ -13,21 +13,25 @@ func main() {
 }
 
 func goRoutineTest() {
-	messages := make(chan string, 10)
+	// messages := make(chan string)
+	messages := make(chan string, 5)
 
 	go func() {
+		fmt.Println("go routine started!")
 		for {
-			time.Sleep(1 * time.Second)
 			msg, ok := <-messages
 			if !ok {
 				return
 			}
 			fmt.Printf("%v %v\n", time.Now(), msg)
+			time.Sleep(1 * time.Second)
 		}
 	}()
-
-	for i := 0; i < 10; i++ {
+	time.Sleep(5000 * time.Millisecond)
+	for i := 1; i < 10; i++ {
+		fmt.Printf("add ping: %d\n", i)
 		messages <- fmt.Sprintf("ping: %d", i)
+		// time.Sleep(250 * time.Millisecond)
 	}
 	close(messages)
 	fmt.Println("Generation is done")
