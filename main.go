@@ -2,13 +2,17 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"net/http"
 	"time"
+
+	"github.com/BoseCorp/monetization/handlers"
 )
 
 func main() {
-	// http.HandleFunc("/", handlers.Hello)
+	http.HandleFunc("/", handlers.Hello)
 
-	// log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 	goRoutineTest()
 }
 
