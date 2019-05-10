@@ -19,6 +19,7 @@ func main() {
 
 func goRoutineTest() {
 	// messages := make(chan string)
+
 	messages := make(chan string, 5)
 
 	go func() {
