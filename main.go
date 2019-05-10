@@ -42,5 +42,6 @@ func goRoutineTest() {
 	close(messages)
 	fmt.Println("Generation is done")
 	time.Sleep(12 * time.Second)
+	// test line 1
 
 }
