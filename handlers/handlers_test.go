@@ -35,7 +35,7 @@ func TestHello(t *testing.T) {
 
 }
 
-// func TestFailed(t *testing.T) {
-// 	t.Errorf("Error test case example")
+func TestFailed(t *testing.T) {
+	t.Errorf("Error test case example")
 
-// }
+}
