@@ -48,5 +48,6 @@ func goRoutineTest() {
 	// test line 4
 	// test line 5
 	// test line 6
+	// test line 7
 
 }
